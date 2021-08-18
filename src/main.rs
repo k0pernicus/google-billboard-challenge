@@ -120,7 +120,8 @@ fn main() {
         let mut e: E = E::from_str(RAW_E).unwrap();
         // Already known numbers
         let not_included: [u64; 4] = [7182818284, 8182845904, 8747135266, 7427466391];
-        let sum_to_found: u32 = 49;
+        let sum_to_found: u32 = 49; // I found out (after a long time)
+                                    // that if you sum the digits inside the number below, all equal 49 (!)
         loop {
             let (number, sum) = e.sum_of_next_number(LENGTH_OF_NUMBER);
             if sum == sum_to_found && !not_included.contains(&number) {
